@@ -1,9 +1,9 @@
-import './App.module.scss';
+import styles from './App.module.scss';
 import { Spinner } from './components/spinner/spinner';
 
 function App() {
   return (
-    <div>
+    <div className={styles.container}>
       <Spinner />
     </div>
   );
