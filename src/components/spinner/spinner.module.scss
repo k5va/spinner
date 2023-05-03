@@ -1,0 +1,38 @@
+.spinner {
+  width: 240px;
+  aspect-ratio: 1/1;
+  position: relative;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: conic-gradient(
+      #00ff00 0deg,
+      #00ffff 20deg,
+      #8fd4ff 40deg,
+      #de98ff 60deg,
+      #ff828c 80deg,
+      #ffbb46 100deg,
+      transparent 120deg
+    );
+    animation: spinner-animate 5s linear infinite;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 10%;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+  }
+}
+
+@keyframes spinner-animate {
+  to {
+    transform: rotateZ(360deg);
+  }
+}

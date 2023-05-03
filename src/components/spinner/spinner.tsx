@@ -1,5 +1,5 @@
-import React from 'react';
+import styles from './spinner.module.scss';
 
 export const Spinner = (): JSX.Element => {
-  return <div>Loading...</div>;
+  return <div className={styles.spinner}></div>;
 };
